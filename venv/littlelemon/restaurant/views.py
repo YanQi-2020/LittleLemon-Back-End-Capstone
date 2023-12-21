@@ -9,6 +9,7 @@ def index(request):
 from rest_framework import generics, viewsets
 from .models import Menu, Booking
 from .serializers import MenuSerializer, BookingSerializer
+from rest_framework.authtoken.models import Token
 
 class MenuItemsView(generics.ListCreateAPIView):
     queryset = Menu.objects.all()
