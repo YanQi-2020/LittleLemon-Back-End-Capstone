@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('restaurant/', include('restaurant.urls')),
     #add following line to urlpatterns list 
-    path('restaurant/menu/',include('restaurant.urls'))
+    path('restaurant/menu/',include('restaurant.urls')),
+    path('restaurant/booking/', include('restaurant.urls')),
+    
 ]
