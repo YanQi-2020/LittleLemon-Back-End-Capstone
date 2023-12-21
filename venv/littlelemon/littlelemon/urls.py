@@ -20,9 +20,9 @@ from django.urls import path, include
 from rest_framework.authtoken.views import obtain_auth_token
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('restaurant/', include('restaurant.urls')),
+    path('restaurant/', include(('restaurant.urls','restaurant'), namespace='restaurant')),
     #add following line to urlpatterns list 
-    path('restaurant/menu/',include('restaurant.urls')),
+    path('restaurant/menu/',include(('restaurant.urls','restaurant'), namespace='restaurant')),
     path('restaurant/booking/', include('restaurant.urls')),
     #add following lines to update urlpatterns list
     path('auth/', include('djoser.urls')),
